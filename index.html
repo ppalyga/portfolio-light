@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Przemysław Pałyga - Junior Front-End Developer Porfolio</title>
     <meta name="description" content="I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something I believe in and I always do my best to write code that is clean, properly structured and light. Visit my portfolio and get to know me!"
-    /><meta name="theme-color" content="#313236">
+    />
     <link href="https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat:400,500&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -18,21 +18,52 @@
         <div class="navigation__strap">
             <span class="navigation__current-section">ABOUT ME</span>
             <div class="navigation__hamburger">
-                <div class="navigation__bar"></div>
+                <div class="navigation__bar navigation__bar--top"></div>
+                <div class="navigation__bar navigation__bar--middle"></div>
+                <div class="navigation__bar navigation__bar--bottom"></div>
             </div>
         </div>
-         <ul class="navigation__list">
-            <li class="navigation__list-item">about me</li>
-            <li class="navigation__list-item">skills</li>
-            <li class="navigation__list-item">projects</li>
-            <li class="navigation__list-item">contact</li>
-        </ul> 
+        <ul class="navigation__list">
+            <a href="#about">
+                <li class="navigation__list-item">about me</li>
+            </a>
+            <a href="#">
+                <li class="navigation__list-item">skills</li>
+            </a>
+            <a href="#">
+                <li class="navigation__list-item">projects</li>
+            </a>
+            <a href="#">
+                <li class="navigation__list-item">contact</li>
+            </a>
+        </ul>
     </nav>
-     <section class="about">
+    <section class="about" id="about">
         <h1 class="about__header"><span class="about__name">Przemysław Pałyga</span> <span class="about__position">Junior Front-End Developer</span>
             <span class="about__training">in training</span>
         </h1>
-    </section> 
+        <div class="about__photo-group">
+            <img class="about__photo" src="assets/imgs/profile-photo.jpg" alt="Przemysław Pałyga - Junior Front-End Developer profile photo">
+            <div class="about__frame"></div>
+        </div>
+        <div class="section-header section-header--about">
+            <h2 class="section-header__text">about me</h2>
+            <div class="section-header__line"></div>
+        </div>
+        <p class="about__paragraph about__paragraph--first">I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something
+            I believe in and I always do my best to write code that is clean, properly structured and light.</p>
+        <div class="about__quote"><span class="about__quote-item">I am certain that I could use this set of knowledge and skills to help you create even more amazing stuff.</span></div>
+        <p class="about__paragraph about__paragraph--second">I've recently got my Master's degree in Communication Design at University of Wroclaw. UX Design is one of many subjects
+            I was lucky to explore during the studies. Working at one of the best SEO agencies in Poland gave me a solid
+            experience in the area of website optimization for search engines.</p>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="section-header section-header--skills">
+            <h2 class="section-header__text">skills</h2>
+            <div class="section-header__line"></div>
+        </div>
+    </section>
 
     <script src="assets/js/script.js"></script>
 </body>
