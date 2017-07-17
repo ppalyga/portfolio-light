@@ -1,7 +1,7 @@
 (function () {
     var nav = document.querySelector('.navigation'),
         hamburger = document.querySelector('.navigation__hamburger');
-        currentSection = document.querySelector('.navigation__current-section'),
+    currentSection = document.querySelector('.navigation__current-section'),
         navigationList = document.querySelector('.navigation__list'),
         barTop = document.querySelector('.navigation__bar--top'),
         barMiddle = document.querySelector('.navigation__bar--middle'),
@@ -31,8 +31,16 @@
         });
     }
 
+    function initializeSkillsSlider() {
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            loop: true
+        });
+    }
 
     initializeMenu();
     toggleMenu();
+    initializeSkillsSlider();
 
 })();

@@ -1,5 +1,7 @@
 @import url("reset.css");
 
+@import url("swiper.min.css");
+
 // COLORS
 $blue: #0152fc;
 $blue--light: #ccdcfe;
@@ -10,10 +12,11 @@ $grey--medium: #666;
 $grey--light: #cccfd9;
 $white: #fff;
 $shadow: 0px 12px 16.2px 1.8px rgba(0, 0, 0, 0.15);
-$block-background--initial: inset 0px 0px 0px 0px $blue--light;
-$block-background--ready: inset 0px -25px 0px 0px $blue--light;
-$block-background--ready-grey: inset 0px -25px 0px 0px $grey--light;
-$block-background--ready-grey-small: inset 0px -11px 0px 0px $grey--light;
+$block-background__header--initial: inset 0px 0px 0px 0px $blue--light;
+$block-background__header--ready: inset 0px -25px 0px 0px $blue--light;
+$block-background__menu: inset 0px -25px 0px 0px $grey--light;
+$block-background__quote: inset 0px -11px 0px 0px $grey--light;
+$block-background__link: inset 0px -6px 0px 0px $blue--light;
 
 //TYPOGRAPHY
 $montserrat: Montserrat, sans-serif;
@@ -46,8 +49,9 @@ a {
     &__text {
         font-family: $domine;
         font-weight: 700;
-        color: $grey--dark;
         font-size: $huge;
+        color: $grey--dark;
+        text-shadow: 4px 4px 15px rgba(150, 150, 150, 0.5);
     }
 
     &__line {
@@ -62,25 +66,25 @@ a {
 //ANIMATIONS
 @keyframes block-background {
     from {
-        box-shadow: $block-background--initial;
+        box-shadow: $block-background__header--initial;
     }
 
     to {
-        box-shadow: $block-background--ready;
+        box-shadow: $block-background__header--ready;
     }
 }
 
 //NAVIGATION
 .navigation {
-    position: fixed;
-    height: 5.2rem;
-    width: 100%;
-    background: $white;
-    box-shadow: $shadow;
     display: none;
+    position: fixed;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 5.2rem;
     z-index: 10;
+    background: $white;
+    box-shadow: $shadow;
     transition: all 0.4s ease-out;
 
     &--full-screen {
@@ -89,8 +93,8 @@ a {
     }
 
     &__current-section {
-        padding: 2rem 0 0 $margin--mobile;
         display: inline-block;
+        padding: 2rem 0 0 $margin--mobile;
         font-family: $montserrat;
         font-weight: 500;
         font-size: $normal;
@@ -102,13 +106,13 @@ a {
     }
 
     &__hamburger {
-        padding: 1.1rem $margin--mobile 0 0;
-        width: 3rem;
-        height: 3rem;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
+        padding: 1.1rem $margin--mobile 0 0;
+        width: 3rem;
+        height: 3rem;
 
         &:hover .navigation__bar--middle {
             width: 2.3rem;
@@ -121,15 +125,15 @@ a {
 
     &__strap {
         display: flex;
-        width: 100%;
         justify-content: space-between;
         align-items: flex-start;
+        width: 100%;
     }
 
     &__bar {
+        position: relative;
         height: 0.2rem;
         background: $grey--dark;
-        position: relative;
         transition: all 0.2s;
 
         &--middle {
@@ -168,9 +172,9 @@ a {
     &__list {
         position: absolute;
         top: 10rem;
+        height: 0;
         transition: opacity 0.5s ease-in-out;
         opacity: 0;
-        height: 0;
         overflow: hidden;
 
         &--active {
@@ -180,15 +184,15 @@ a {
     }
 
     &__list-item {
+        margin-bottom: 3rem;
         font-family: $domine;
+        font-size: $huge;
         font-weight: 700;
         color: $grey--medium;
-        font-size: $huge;
-        margin-bottom: 3rem;
         transition: box-shadow 0.3s;
 
         &:hover {
-            box-shadow: $block-background--ready-grey;
+            box-shadow: $block-background__menu;
         }
     }
 }
@@ -196,19 +200,19 @@ a {
 //ABOUT
 
 .about {
-    position: relative;
-    top: 6.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top: 6.5rem;
 
     &__header {
+        padding: 0 $margin--mobile;
         width: $width--mobile;
         font-family: $montserrat;
         font-size: $huge;
         font-weight: 500;
         color: $blue;
-        padding: 0 $margin--mobile;
     }
 
     &__name {
@@ -230,7 +234,7 @@ a {
     }
 
     &__position {
-        box-shadow: $block-background--ready;
+        box-shadow: $block-background__header--ready;
         animation: block-background 1s;
     }
 
@@ -245,21 +249,21 @@ a {
     }
 
     &__frame {
-        border: 2px solid $blue;
-        width: 22rem;
-        height: 17.3rem;
         position: relative;
         bottom: 17rem;
         left: 0.5rem;
         z-index: -1;
+        width: 22rem;
+        height: 17.3rem;
+        border: 2px solid $blue;
     }
 
     &__paragraph {
-        font-family: $montserrat;
-        color: $beige;
-        font-size: $normal;
-        line-height: 1.667;
         width: $width--mobile;
+        font-family: $montserrat;
+        font-size: $normal;
+        color: $beige;
+        line-height: 1.667;
 
         &--first {
             margin-top: 3rem;
@@ -272,16 +276,16 @@ a {
     }
 
     &__quote {
+        margin-top: 3rem;
         width: $width--mobile;
         text-align: center;
-        margin-top: 3rem;;
     }
 
     &__quote-item {
         font-family: $domine;
-        color: $grey--medium;
         font-size: $big;
-        box-shadow: $block-background--ready-grey-small;
+        color: $grey--medium;
+        box-shadow: $block-background__quote;
     }
 }
 
@@ -289,8 +293,158 @@ a {
     margin-top: -9rem;
 }
 
-
 //SKILLS
 .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10rem;
+
+    &__paragraph {
+        margin-top: 3rem;
+        width: $width--mobile;
+        font-family: $montserrat;
+        font-size: $normal;
+        line-height: 1.667;
+        color: $grey--medium;
+    }
+
+    &__link {
+        font-weight: 500;
+        color: $blue;
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: $block-background__link;
+        }
+    }
+
+    &__image {
+        position: relative;
+        margin-top: 1rem;
+        width: 19.3rem;
+        height: 14rem;
+        background: url("../imgs/skills-blue.png");
+
+        &::after {
+            content: "";
+            display: block;
+            position: relative;
+            left: -3.9rem;
+            top: 13.8rem;
+            width: $width--mobile;
+            height: 16.8rem;
+            border: 2px solid $blue;
+            box-shadow: $shadow;
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        left: 4.5rem !important;
+    }
+}
+
+.skill-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: $width--mobile;
+    height: 16.8rem;
+    background: $white;
+    border-top: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    text-align: center;
+
+    &__items {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 100%;
+        width: 35%;
+        background: $blue--light;
+        text-align: left;
+        font-family: $domine;
+        font-size: $normal;
+        font-weight: 700;
+        line-height: 1.667;
+        color: $blue;
+    }
+
+    &__main-skill {
+        font-size: $big;
+    }
+
+    &__description {
+        display: inline-block;
+        margin: 0 auto;
+        width: 50%;
+        font-family: $montserrat;
+        font-size: $normal;
+        color: $grey--medium;
+        text-align: left;
+    }
+}
+
+.swiper-container {
+    margin-top: -0.2rem;
+    width: $width--mobile;
+}
+
+//PROJECTS
+.section-header--projects {
+    margin-top: 4rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+        margin-top: 3rem;
+        width: 19.3rem;
+        height: 16.5rem;
+        background: url("../imgs/projects-beige.png");
+    }
+
+    &__button {
+        position: relative;
+        top: -0.2rem;
+        width: $width--mobile;
+        height: 15.1rem;
+        box-sizing: border-box;
+        padding: 3rem 6rem 0 3rem;
+        background: $beige--light;
+        border: 2px solid $beige;
+        box-shadow: $shadow;
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        &::after {
+            content: url("../imgs/arrow-beige.png");
+            position: relative;
+            bottom: 6rem;
+            right: -17rem;
+        }
+    }
+
+    &__name {
+        font-family: $domine;
+        font-weight: 700;
+        font-size: $big;
+        color: $beige;
+    }
+
+    &__description {
+        font-family: $montserrat;
+        font-size: $normal;
+        color: $grey--medium;
+        margin-top: 1rem;
+    }
 }
