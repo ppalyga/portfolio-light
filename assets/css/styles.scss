@@ -325,6 +325,7 @@ a {
         width: 19.3rem;
         height: 14rem;
         background: url("../imgs/skills-blue.png");
+        background-size: cover;
 
         &::after {
             content: "";
@@ -408,6 +409,7 @@ a {
         width: 19.3rem;
         height: 16.5rem;
         background: url("../imgs/projects-beige.png");
+        background-size: cover;
     }
 
     &__button {
