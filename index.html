@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Przemysław Pałyga - Junior Front-End Developer Porfolio</title>
+    <meta name="description" content="I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something I believe in and I always do my best to write code that is clean, properly structured and light. Visit my portfolio and get to know me!"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navigation">
+        <div class="navigation__strap">
+            <span class="navigation__current-section">ABOUT ME</span>
+            <div class="navigation__hamburger">
+                <div class="navigation__bar navigation__bar--top"></div>
+                <div class="navigation__bar navigation__bar--middle"></div>
+                <div class="navigation__bar navigation__bar--bottom"></div>
+            </div>
+        </div>
+        <ul class="navigation__list">
+            <a href="#about">
+                <li class="navigation__list-item">about me</li>
+            </a>
+            <a href="#skills">
+                <li class="navigation__list-item">skills</li>
+            </a>
+            <a href="#projects">
+                <li class="navigation__list-item">projects</li>
+            </a>
+            <a href="#contact">
+                <li class="navigation__list-item">contact</li>
+            </a>
+        </ul>
+    </nav>
+    <section class="about" id="about">
+        <h1 class="about__header"><span class="about__name">Przemysław Pałyga</span> <span class="about__position">Junior Front-End Developer</span>
+            <span class="about__training">in training</span>
+        </h1>
+
+        <div class="about__photo-group">
+            <img class="about__photo" src="assets/imgs/profile-photo.jpg" alt="Przemysław Pałyga - Junior Front-End Developer profile photo">
+            <div class="about__frame"></div>
+        </div>
+
+        <div class="section-header section-header--about">
+            <h2 class="section-header__text">about me</h2>
+            <div class="section-header__line"></div>
+        </div>
+
+        <p class="about__paragraph about__paragraph--first">I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something
+            I believe in and I always do my best to write code that is clean, properly structured and light.</p>
+        <div class="about__quote"><span class="about__quote-item">I am certain that I could use this set of knowledge and skills to help you create even more amazing stuff.</span></div>
+        <p class="about__paragraph about__paragraph--second">I've recently got my Master's degree in Communication Design at University of Wroclaw. UX Design is one of many subjects
+            I was lucky to explore during the studies. Working at one of the best SEO agencies in Poland gave me a solid
+            experience in the area of website optimization for search engines.</p>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="section-header section-header--skills">
+            <h2 class="section-header__text">skills</h2>
+            <div class="section-header__line"></div>
+        </div>
+
+        <p class="skills__paragraph">I’ve been learning Front-End technologies for over a half of year now. I took part in many courses and bootcamps
+            related to Web Design, UX Design and JavaScript. You can <a class="skills__link" href="#">see my ceriticates here</a>            or visit my account on <a class="skills__link" href="https://github.com/ppalyga" target="_blank">GitGub</a>,
+            <a class="skills__link" href="https://codepen.io/ppalyga/" target="_blank">CodePen</a> or <a class="skills__link"
+                href="https://www.freecodecamp.com/ppalyga" target="_blank">FreeCodeCamp.</a></p>
+
+        <div class="skills__image"></div>
+
+        <div class="skills__cards-group swiper-container">
+            <div class="skills__cards-wrapper swiper-wrapper">
+                <div class="skill-card swiper-slide">
+                    <div class="skill-card__items">
+                        <h3><span class="skill-card__main-skill">html5</span><br/>emmet<br/>bootstrap<br/>vscode</h3>
+                    </div>
+                    <p class="skill-card__description">As easy as it is to learn, HTML helped me believe that I can code. To take full advantage of the markup,
+                        I always have semantics in mind.
+                    </p>
+                </div>
+
+                <div class="skill-card swiper-slide">
+                    <div class="skill-card__items">
+                        <h3><span class="skill-card__main-skill">css3</span><br/>rwd<br/>sass<br/>flexbox</h3>
+                    </div>
+                    <p class="skill-card__description">The power of CSS constantly surprises me. I really love how it’s getting more and more advanced when
+                        it comes to creating responsive layouts.
+                    </p>
+                </div>
+
+                <div class="skill-card swiper-slide">
+                    <div class="skill-card__items">
+                        <h3><span class="skill-card__main-skill">js</span><br/>jquery<br/>es6<br/>react</h3>
+                    </div>
+                    <p class="skill-card__description">Learning this language was the first serious challenge I came across. At the same time, I know it is
+                        something I enjoy and I expand my knowledge in this field every day.
+                    </p>
+                </div>
+
+                <div class="skill-card swiper-slide">
+                    <div class="skill-card__items">
+                        <h3><span class="skill-card__main-skill">nodeJS</span><br/>express<br/>mongodb</h3>
+                    </div>
+                    <p class="skill-card__description">While my focus is on the Front-End, I also had a chance to build a few simple apps in NodeJS. I learnt
+                        a bit about RESTful routing, authentication and authorization.
+                    </p>
+                </div>
+
+                <div class="skill-card swiper-slide">
+                    <div class="skill-card__items">
+                        <h3><span class="skill-card__main-skill">git</span><br/>webpack<br/>gulp</h3>
+                    </div>
+                    <p class="skill-card__description">When I first learnt the basics of this version control system, I immediately thought it is extremely
+                        helpful. Now I use GIT for most of my projects.
+                    </p>
+                </div>
+            </div>
+            <div class="skills__dots swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="section-header section-header--projects">
+            <h2 class="section-header__text">projects</h2>
+            <div class="section-header__line"></div>
+        </div>
+
+        <div class="projects__image"></div>
+        <a href="http://yelpcamp.ppalyga.com/" class="projects__link" target="_blank">
+            <div class="projects__button">
+                <h3 class="projects__name">YelpCamp</h3>
+                <p class="projects__description">A reviews aggregator for campgrounds. Based on Bootstrap, NodeJS and MongoDB, deployed on Heroku.</p>
+            </div>
+        </a>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section-header section-header--contact">
+            <h2 class="section-header__text">contact</h2>
+            <div class="section-header__line"></div>
+        </div>
+
+        <p class="contact__paragraph">If you want to hear more about me or if you are iterested in working with me, please use the form below and I will
+            respond as soons as possible.</p>
+
+        <form class="contact__form" action="https://getform.org/f/17ddcee4-3b4f-4d91-9279-966c4631bef9" method="POST">
+            <input class="contact__input" type="text" name="name" placeholder="your name">
+            <input class="contact__input" type="email" name="email" placeholder="your e-mail">
+            <textarea class="contact__input contact__input--message" name="message" id="message" rows="5"></textarea>
+            <button class="contact__button">send</button>
+        </form>
+    </section>
+
+    <div class="to-top">
+        <a class="to-top__link" href="#about"><span class="to-top__text">back to top</span></a>
+        <div class="to-top__line"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js" integrity="sha256-ShAhm+50eq3u2njxZteHrfMlg/Nh+I1EtHL289p5gIM="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/smoothscroll.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
