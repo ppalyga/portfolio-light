@@ -27,13 +27,13 @@
             <a href="#about">
                 <li class="navigation__list-item">about me</li>
             </a>
-            <a href="#">
+            <a href="#skills">
                 <li class="navigation__list-item">skills</li>
             </a>
-            <a href="#">
+            <a href="#projects">
                 <li class="navigation__list-item">projects</li>
             </a>
-            <a href="#">
+            <a href="#contact">
                 <li class="navigation__list-item">contact</li>
             </a>
         </ul>
@@ -139,8 +139,32 @@
             </div>
         </a>
     </section>
+
+    <section class="contact" id="contact">
+        <div class="section-header section-header--contact">
+            <h2 class="section-header__text">contact</h2>
+            <div class="section-header__line"></div>
+        </div>
+
+        <p class="contact__paragraph">If you want to hear more about me or if you are iterested in working with me, please use the form below and I will
+            respond as soons as possible.</p>
+
+        <form class="contact__form" action="https://getform.org/f/17ddcee4-3b4f-4d91-9279-966c4631bef9" method="POST">
+            <input class="contact__input" type="text" name="name" placeholder="your name">
+            <input class="contact__input" type="email" name="email" placeholder="your e-mail">
+            <textarea class="contact__input contact__input--message" name="message" id="message" rows="5"></textarea>
+            <button class="contact__button">send</button>
+        </form>
+    </section>
+
+    <div class="to-top">
+        <a class="to-top__link" href="#about"><span class="to-top__text">back to top</span></a>
+        <div class="to-top__line"></div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js" integrity="sha256-ShAhm+50eq3u2njxZteHrfMlg/Nh+I1EtHL289p5gIM="
         crossorigin="anonymous"></script>
+    <script src="assets/js/smoothscroll.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
