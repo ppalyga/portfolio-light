@@ -28,6 +28,7 @@ $huge: 5.2rem;
 //LAYOUT
 $margin--mobile: 2.6rem;
 $width--mobile: 26.6rem;
+$width--tablet: 50rem;
 
 //GENERAL RULES
 html {
@@ -35,7 +36,8 @@ html {
 }
 
 body {
-    background: url(../imgs/background-pattern.png);
+    background: url(../imgs/background-pattern.svg);
+    background-size: 26.6rem 26.6rem;
 }
 
 a {
@@ -205,6 +207,12 @@ a {
     align-items: center;
     position: relative;
     top: 6.5rem;
+
+    &__introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__header {
         padding: 0 $margin--mobile;
@@ -429,10 +437,13 @@ a {
         }
 
         &::after {
-            content: url("../imgs/arrow-beige.png");
+            content: url("../imgs/arrow-beige.svg");
+            display: inline-block;
             position: relative;
             bottom: 6rem;
             right: -17rem;
+            width: 2.1rem;
+            height: 3.3rem;
         }
     }
 
@@ -483,7 +494,7 @@ a {
         font-size: $big;
         color: $grey--dark;
 
-        &--message{
+        &--message {
             box-sizing: border-box;
             max-width: $width--mobile;
             font-size: $normal;
@@ -533,5 +544,134 @@ a {
         height: 1rem;
         margin-top: 0.5rem;
         background: $grey--dark;
+    }
+}
+
+//TABLET
+
+@media (min-width: 600px) {
+    .section-header--about {
+        margin-top: -1rem;
+    }
+
+    //ABOUT
+    .about {
+        top: 3rem;
+
+        &__introduction {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        &__photo-group {
+            position: relative;
+            top: 6.7rem;
+        }
+
+        &__text-content {
+            display: flex;
+            flex-flow: row wrap;
+            width: $width--tablet;
+            margin-top: 2rem;
+        }
+
+        &__paragraph {
+            &--first {
+                width: 19.8rem;
+                margin-left: 1.7rem;
+            }
+
+            &--second {
+                margin-left: 0.5rem;
+                width: 28rem;
+                text-align: left;
+            }
+        }
+
+        &__quote {
+            order: 3;
+            width: $width--tablet;
+        }
+    }
+
+    //SKILLS
+    .skills {
+        &__paragraph {
+            width: $width--tablet;
+        }
+
+        &__image {
+            &::after {
+                width: $width--tablet;
+                left: -15.6rem;
+            }
+        }
+
+        &__dots {
+            left: 8.6rem !important;
+        }
+    }
+
+    .skill-card {
+        width: $width--tablet !important;
+    }
+
+    .swiper-container {
+        width: $width--tablet;
+    }
+
+    //PROJECTS
+
+    .projects {
+        &__button {
+            width: $width--tablet;
+            height: 10.6rem;
+            padding-top: 2.5rem;
+            padding-right: 12rem;
+
+            &::after {
+                right: -38rem;
+                bottom: 4.4rem;
+            }
+        }
+    }
+
+    //CONTACT
+    .contact {
+        &__group {
+            display: flex;
+            flex-direction: row;
+            width: $width--tablet;
+        }
+
+        &__paragraph {
+            width: 19.8rem;
+            position: absolute;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__data {
+            height: 10rem;
+            position: relative;
+            top: 14.8rem;
+        }
+
+        &__message {
+            margin-left: 3.6rem;
+        }
+
+        &__input {
+            width: 19.8rem;
+            font-size: $normal;
+
+            &--message {
+                width: 26.6rem;
+                height: 17.6rem;
+            }
+        }
     }
 }

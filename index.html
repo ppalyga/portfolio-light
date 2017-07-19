@@ -25,7 +25,7 @@
         </div>
         <ul class="navigation__list">
             <a href="#about">
-                <li class="navigation__list-item">about me</li>
+                <li class="navigation__list-item navigation__list-item--active">about me</li>
             </a>
             <a href="#skills">
                 <li class="navigation__list-item">skills</li>
@@ -39,13 +39,15 @@
         </ul>
     </nav>
     <section class="about" id="about">
-        <h1 class="about__header"><span class="about__name">Przemysław Pałyga</span> <span class="about__position">Junior Front-End Developer</span>
-            <span class="about__training">in training</span>
-        </h1>
+        <div class="about__introduction">
+            <h1 class="about__header"><span class="about__name">Przemysław Pałyga</span> <span class="about__position">Junior Front-End Developer</span>
+                <span class="about__training">in training</span>
+            </h1>
 
-        <div class="about__photo-group">
-            <img class="about__photo" src="assets/imgs/profile-photo.jpg" alt="Przemysław Pałyga - Junior Front-End Developer profile photo">
-            <div class="about__frame"></div>
+            <div class="about__photo-group">
+                <img class="about__photo" src="assets/imgs/profile-photo.jpg" alt="Przemysław Pałyga - Junior Front-End Developer profile photo">
+                <div class="about__frame"></div>
+            </div>
         </div>
 
         <div class="section-header section-header--about">
@@ -53,12 +55,14 @@
             <div class="section-header__line"></div>
         </div>
 
-        <p class="about__paragraph about__paragraph--first">I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something
-            I believe in and I always do my best to write code that is clean, properly structured and light.</p>
-        <div class="about__quote"><span class="about__quote-item">I am certain that I could use this set of knowledge and skills to help you create even more amazing stuff.</span></div>
-        <p class="about__paragraph about__paragraph--second">I've recently got my Master's degree in Communication Design at University of Wroclaw. UX Design is one of many subjects
-            I was lucky to explore during the studies. Working at one of the best SEO agencies in Poland gave me a solid
-            experience in the area of website optimization for search engines.</p>
+        <div class="about__text-content">
+            <p class="about__paragraph about__paragraph--first">I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something
+                I believe in and I always do my best to write code that is clean, properly structured and light.</p>
+            <div class="about__quote"><span class="about__quote-item">I am certain that I could use this set of knowledge and skills to help you create even more amazing stuff.</span></div>
+            <p class="about__paragraph about__paragraph--second">I've recently got my Master's degree in Communication Design at University of Wroclaw. UX Design is one of many
+                subjects I was lucky to explore during the studies. Working at one of the best SEO agencies in Poland gave
+                me a solid experience in the area of website optimization for search engines.</p>
+        </div>
     </section>
 
     <section class="skills" id="skills">
@@ -146,15 +150,20 @@
             <div class="section-header__line"></div>
         </div>
 
-        <p class="contact__paragraph">If you want to hear more about me or if you are iterested in working with me, please use the form below and I will
-            respond as soons as possible.</p>
-
-        <form class="contact__form" action="https://getform.org/f/17ddcee4-3b4f-4d91-9279-966c4631bef9" method="POST">
-            <input class="contact__input" type="text" name="name" placeholder="your name">
-            <input class="contact__input" type="email" name="email" placeholder="your e-mail">
-            <textarea class="contact__input contact__input--message" name="message" id="message" rows="5"></textarea>
-            <button class="contact__button">send</button>
-        </form>
+        <div class="contact__group">
+            <form class="contact__form" action="https://getform.org/f/17ddcee4-3b4f-4d91-9279-966c4631bef9" method="POST">
+                <div class="contact__data">
+                    <input class="contact__input" type="text" name="name" placeholder="your name">
+                    <input class="contact__input" type="email" name="email" placeholder="your e-mail">
+                </div>
+                <div class="contact__message">
+                    <textarea class="contact__input contact__input--message" name="message" id="message" rows="5"></textarea>
+                    <button class="contact__button">send</button>
+                </div>
+            </form>
+            <p class="contact__paragraph">If you want to hear more about me or if you are iterested in working with me, please use the form below and I
+                will respond as soons as possible.</p>
+        </div>
     </section>
 
     <div class="to-top">
@@ -167,4 +176,5 @@
     <script src="assets/js/smoothscroll.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
