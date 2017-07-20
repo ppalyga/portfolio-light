@@ -17,6 +17,7 @@ $block-background__header--ready: inset 0px -25px 0px 0px $blue--light;
 $block-background__menu: inset 0px -25px 0px 0px $grey--light;
 $block-background__quote: inset 0px -11px 0px 0px $grey--light;
 $block-background__link: inset 0px -6px 0px 0px $blue--light;
+$block-background__link--beige: inset 0px -6px 0px 0px $beige--light;
 
 //TYPOGRAPHY
 $montserrat: Montserrat, sans-serif;
@@ -29,6 +30,7 @@ $huge: 5.2rem;
 $margin--mobile: 2.6rem;
 $width--mobile: 26.6rem;
 $width--tablet: 50rem;
+$width--desktop: 113.6rem;
 
 //GENERAL RULES
 html {
@@ -94,9 +96,12 @@ a {
         background: $beige--light;
     }
 
+    &__logo {
+        display: none;
+    }
+
     &__current-section {
         display: inline-block;
-        padding: 2rem 0 0 $margin--mobile;
         font-family: $montserrat;
         font-weight: 500;
         font-size: $normal;
@@ -112,7 +117,6 @@ a {
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        padding: 1.1rem $margin--mobile 0 0;
         width: 3rem;
         height: 3rem;
 
@@ -127,9 +131,17 @@ a {
 
     &__strap {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: center;
         width: 100%;
+        height: 100%;
+    }
+
+    &__container {
+        width: $width--mobile;
+        height: 5.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__bar {
@@ -205,6 +217,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     top: 6.5rem;
 
@@ -247,6 +260,8 @@ a {
     }
 
     &__photo {
+        width: 22rem;
+        height: 17.3rem;
         margin-top: 4.5rem;
         box-shadow: $shadow;
         transition: box-shadow 0.5s;
@@ -280,6 +295,10 @@ a {
         &--second {
             text-align: right;
             margin-top: 3rem;
+        }
+
+        &--merged {
+            display: none;
         }
     }
 
@@ -411,6 +430,15 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &__paragraph {
+        margin-top: 3rem;
+        width: $width--mobile;
+        font-family: $montserrat;
+        font-size: $normal;
+        line-height: 1.667;
+        color: $beige;
+    }
 
     &__image {
         margin-top: 3rem;
@@ -550,6 +578,11 @@ a {
 //TABLET
 
 @media (min-width: 600px) {
+    //NAVIGATION
+    .navigation__container {
+        width: $width--tablet;
+    }
+
     .section-header--about {
         margin-top: -1rem;
     }
@@ -558,9 +591,15 @@ a {
     .about {
         top: 3rem;
 
+        &__header {
+            padding: 0;
+            padding-left: 1.2rem;
+        }
+
         &__introduction {
             display: flex;
             flex-direction: row-reverse;
+            width: $width--tablet;
         }
 
         &__photo-group {
@@ -582,7 +621,6 @@ a {
             }
 
             &--second {
-                margin-left: 0.5rem;
                 width: 28rem;
                 text-align: left;
             }
@@ -623,6 +661,10 @@ a {
     //PROJECTS
 
     .projects {
+        &__paragraph {
+            width: $width--tablet;
+        }
+
         &__button {
             width: $width--tablet;
             height: 10.6rem;
@@ -672,6 +714,194 @@ a {
                 width: 26.6rem;
                 height: 17.6rem;
             }
+        }
+    }
+}
+
+//DESKTOP
+
+@media (min-width: 1366px) {
+    //NAVIGATION
+    .navigation {
+        &__container {
+            width: $width--desktop;
+        }
+
+        &__hamburger {
+            display: none;
+        }
+
+        &__logo {
+            display: block;
+            width: 3.8rem;
+            height: 3.1rem;
+            background: url("../imgs/logo.svg") no-repeat;
+        }
+    }
+
+    //ABOUT
+    .about {
+        width: $width--desktop;
+        margin: 0 auto;
+        flex-direction: row;
+
+        &__introduction {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+
+        &__photo-group {
+            height: 52rem;
+        }
+
+        &__photo {
+            width: 43.6rem;
+            height: 34.2rem;
+        }
+
+        &__header {
+            width: $width--desktop;
+            position: absolute;
+            text-align: center;
+            bottom: -8rem;
+        }
+
+        &__name {
+            position: absolute;
+            top: -1.7rem;
+            left: 22rem;
+        }
+
+        &__training {
+            position: absolute;
+            right: 20.8rem;
+            bottom: -3rem;
+        }
+
+        &__frame {
+            bottom: 33.2rem;
+            left: 0.5rem;
+            width: 43.6rem;
+            height: 33.5rem;
+        }
+
+        &__desktop-group {
+            width: 55.2rem;
+            position: relative;
+            top: 3rem;
+        }
+
+        &__text-content {
+            width: 100%;
+        }
+
+        &__quote {
+            width: 100%;
+            text-align: left;
+        }
+
+        &__paragraph {
+            &--first, &--second {
+                display: none;
+            }
+
+            &--merged {
+                display: block;
+                width: 100%;
+                color: $grey--medium;
+            }
+        }
+    }
+
+    //SKILLS AND PROJECTS
+    .section-header--projects {
+        margin-top: 0;
+    }
+
+    .skills {
+        margin-top: 0;
+
+        &__link {
+            color: $beige;
+
+            &:hover {
+                box-shadow: $block-background__link--beige;
+            }
+        }
+
+        &__image {
+            background: url("../imgs/skills-beige.svg");
+
+            &::after {
+                border: 2px solid $beige;
+            }
+        }
+    }
+
+    .skills-projects {
+        &__container {
+            width: $width--desktop;
+            margin: 22rem auto 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .skill-card {
+        border-top: 2px solid $beige;
+        border-bottom: 2px solid $beige;
+
+        &__items {
+            background: $beige--light;
+            color: $beige;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $beige;
+    }
+
+    .projects {
+        &__paragraph {
+            color: $grey--medium;
+        }
+
+        &__image {
+            margin-top: 2.4rem;
+        }
+    }
+
+    //CONTACT
+
+    .contact {
+        &__group {
+            width: $width--desktop;
+        }
+
+        &__data {
+            margin-left: 27.6rem;
+            margin-bottom: 1rem;
+            margin-top: -15rem;
+        }
+
+        &__message {
+            margin-left: 8.4rem;
+        }
+
+        &__input {
+            width: 27.6rem;
+
+            &--message {
+                min-width: $width--tablet;
+                max-width: $width--tablet;
+                height: 12rem;
+            }
+        }
+
+        &__button {
+            width: $width--tablet;
         }
     }
 }

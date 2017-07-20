@@ -56,11 +56,11 @@
         var activeSection = document.querySelector(".navigation__current-section"),
             screenWidth = window.innerWidth;
 
-        window.addEventListener("resize", throttle(function () {
-            screenWidth = window.innerWidth;
-        }, 500));
+        if (screenWidth >= 1366) {
+            activeSection.textContent = "PRZEMYSŁAW PAŁYGA \u2022 JUNIOR FRONT-END DEVELOPER";
+        }
 
-        window.addEventListener("scroll", throttle(function () {
+        function checkActiveSection() {
             if (screenWidth < 600) {
                 if (window.pageYOffset < 900) {
                     activeSection.textContent = "ABOUT ME";
@@ -71,7 +71,7 @@
                 } else {
                     activeSection.textContent = "CONTACT";
                 }
-            } else {
+            } else if (screenWidth < 1366) {
                 if (window.pageYOffset < 400) {
                     activeSection.textContent = "ABOUT ME";
                 } else if (window.pageYOffset >= 400 & window.pageYOffset < 920) {
@@ -79,8 +79,17 @@
                 } else {
                     activeSection.textContent = "PROJECTS & CONTACT";
                 }
+            } else {
+                activeSection.textContent = "PRZEMYSŁAW PAŁYGA \u2022 JUNIOR FRONT-END DEVELOPER";
             }
+        }
+
+        window.addEventListener("resize", throttle(function () {
+            screenWidth = window.innerWidth;
+            checkActiveSection();
         }, 100));
+
+        window.addEventListener("scroll", throttle(checkActiveSection, 100));
     }
 
     initializeMenu();

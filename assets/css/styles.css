@@ -76,9 +76,11 @@ a {
   height: 100vh;
   background: #f7f1e0;
 }
+.navigation__logo {
+  display: none;
+}
 .navigation__current-section {
   display: inline-block;
-  padding: 2rem 0 0 2.6rem;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
@@ -102,7 +104,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1.1rem 2.6rem 0 0;
   width: 3rem;
   height: 3rem;
 }
@@ -116,13 +117,24 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.navigation__container {
+  width: 26.6rem;
+  height: 5.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .navigation__bar {
   position: relative;
@@ -198,6 +210,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   top: 6.5rem;
 }
@@ -244,6 +259,8 @@ a {
           animation: block-background 1s;
 }
 .about__photo {
+  width: 22rem;
+  height: 17.3rem;
   margin-top: 4.5rem;
   -webkit-box-shadow: 0px 12px 16.2px 1.8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 12px 16.2px 1.8px rgba(0, 0, 0, 0.15);
@@ -278,6 +295,9 @@ a {
 .about__paragraph--second {
   text-align: right;
   margin-top: 3rem;
+}
+.about__paragraph--merged {
+  display: none;
 }
 .about__quote {
   margin-top: 3rem;
@@ -428,6 +448,14 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.projects__paragraph {
+  margin-top: 3rem;
+  width: 26.6rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.667;
+  color: #ccb286;
+}
 .projects__image {
   margin-top: 3rem;
   width: 19.3rem;
@@ -573,12 +601,20 @@ a {
 }
 
 @media (min-width: 600px) {
+  .navigation__container {
+    width: 50rem;
+  }
+
   .section-header--about {
     margin-top: -1rem;
   }
 
   .about {
     top: 3rem;
+  }
+  .about__header {
+    padding: 0;
+    padding-left: 1.2rem;
   }
   .about__introduction {
     display: -webkit-box;
@@ -588,6 +624,7 @@ a {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    width: 50rem;
   }
   .about__photo-group {
     position: relative;
@@ -609,7 +646,6 @@ a {
     margin-left: 1.7rem;
   }
   .about__paragraph--second {
-    margin-left: 0.5rem;
     width: 28rem;
     text-align: left;
   }
@@ -639,6 +675,9 @@ a {
     width: 50rem;
   }
 
+  .projects__paragraph {
+    width: 50rem;
+  }
   .projects__button {
     width: 50rem;
     height: 10.6rem;
@@ -688,5 +727,168 @@ a {
   .contact__input--message {
     width: 26.6rem;
     height: 17.6rem;
+  }
+}
+@media (min-width: 1366px) {
+  .navigation__container {
+    width: 113.6rem;
+  }
+  .navigation__hamburger {
+    display: none;
+  }
+  .navigation__logo {
+    display: block;
+    width: 3.8rem;
+    height: 3.1rem;
+    background: url("../imgs/logo.svg") no-repeat;
+  }
+
+  .about {
+    width: 113.6rem;
+    margin: 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about__introduction {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .about__photo-group {
+    height: 52rem;
+  }
+  .about__photo {
+    width: 43.6rem;
+    height: 34.2rem;
+  }
+  .about__header {
+    width: 113.6rem;
+    position: absolute;
+    text-align: center;
+    bottom: -8rem;
+  }
+  .about__name {
+    position: absolute;
+    top: -1.7rem;
+    left: 22rem;
+  }
+  .about__training {
+    position: absolute;
+    right: 20.8rem;
+    bottom: -3rem;
+  }
+  .about__frame {
+    bottom: 33.2rem;
+    left: 0.5rem;
+    width: 43.6rem;
+    height: 33.5rem;
+  }
+  .about__desktop-group {
+    width: 55.2rem;
+    position: relative;
+    top: 3rem;
+  }
+  .about__text-content {
+    width: 100%;
+  }
+  .about__quote {
+    width: 100%;
+    text-align: left;
+  }
+  .about__paragraph--first, .about__paragraph--second {
+    display: none;
+  }
+  .about__paragraph--merged {
+    display: block;
+    width: 100%;
+    color: #666;
+  }
+
+  .section-header--projects {
+    margin-top: 0;
+  }
+
+  .skills {
+    margin-top: 0;
+  }
+  .skills__link {
+    color: #ccb286;
+  }
+  .skills__link:hover {
+    -webkit-box-shadow: inset 0px -6px 0px 0px #f7f1e0;
+            box-shadow: inset 0px -6px 0px 0px #f7f1e0;
+  }
+  .skills__image {
+    background: url("../imgs/skills-beige.svg");
+  }
+  .skills__image::after {
+    border: 2px solid #ccb286;
+  }
+
+  .skills-projects__container {
+    width: 113.6rem;
+    margin: 22rem auto 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .skill-card {
+    border-top: 2px solid #ccb286;
+    border-bottom: 2px solid #ccb286;
+  }
+  .skill-card__items {
+    background: #f7f1e0;
+    color: #ccb286;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #ccb286;
+  }
+
+  .projects__paragraph {
+    color: #666;
+  }
+  .projects__image {
+    margin-top: 2.4rem;
+  }
+
+  .contact__group {
+    width: 113.6rem;
+  }
+  .contact__data {
+    margin-left: 27.6rem;
+    margin-bottom: 1rem;
+    margin-top: -15rem;
+  }
+  .contact__message {
+    margin-left: 8.4rem;
+  }
+  .contact__input {
+    width: 27.6rem;
+  }
+  .contact__input--message {
+    min-width: 50rem;
+    max-width: 50rem;
+    height: 12rem;
+  }
+  .contact__button {
+    width: 50rem;
   }
 }
