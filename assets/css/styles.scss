@@ -194,6 +194,7 @@ a {
         &--active {
             height: initial;
             opacity: 1;
+            justify-content: center;
         }
     }
 
@@ -452,7 +453,7 @@ a {
         position: relative;
         top: -0.2rem;
         width: $width--mobile;
-        height: 15.1rem;
+        min-height: 15.1rem;
         box-sizing: border-box;
         padding: 3rem 6rem 0 3rem;
         background: $beige--light;
@@ -667,7 +668,7 @@ a {
 
         &__button {
             width: $width--tablet;
-            height: 10.6rem;
+            min-height: 10.6rem;
             padding-top: 2.5rem;
             padding-right: 12rem;
 

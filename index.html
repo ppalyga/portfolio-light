@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="assets/imgs/favicon.ico">
     <link rel="icon" sizes="16x16 32x32 64x64" href="assets/imgs/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/photoswipe.min.css">
+    <link rel="stylesheet" href="assets/css/photoswipe.default-skin.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -64,15 +66,15 @@
             <div class="about__text-content">
                 <p class="about__paragraph about__paragraph--first">I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something
                     I believe in and I always do my best to write code that is clean, properly structured and light.</p>
-                <div class="about__quote"><span class="about__quote-item">I am certain that I could use this set of knowledge and skills to help you create even more amazing stuff.</span></div>
-                <p class="about__paragraph about__paragraph--second">I've recently got my Master's degree in Communication Design at University of Wroclaw. UX Design is one of
-                    many subjects I was lucky to explore during the studies. Working at one of the best SEO agencies in Poland
-                    gave me a solid experience in the area of website optimization for search engines.</p>
+                <div class="about__quote"><span class="about__quote-item">I can use my set of knowledge and skills to help you create even more amazing stuff.</span></div>
+                <p class="about__paragraph about__paragraph--second">I got my Master's degree in Communication Design at the University of Wroclaw. UX Design is one of many subjects
+                    I was lucky to explore during the studies. Working at one of the best SEO agencies in Poland gave me
+                    a solid experience in the area of website optimization for search engines.</p>
                 <p class="about__paragraph about__paragraph--merged">I'm a self-taught who wants to put his knowledge into professional practice. The power of simplicity is something
                     I believe in and I always do my best to write code that is clean, properly structured and light. I've
-                    recently got my Master's degree in Communication Design at University of Wroclaw. UX Design is one of
-                    many subjects I was lucky to explore during the studies. Working at one of the best SEO agencies in Poland
-                    gave me a solid experience in the area of website optimization for search engines.</p>
+                    recently got my Master's degree in Communication Design at the University of Wroclaw. UX Design is one
+                    of many subjects I was lucky to explore during the studies. Working at one of the best SEO agencies in
+                    Poland gave me a solid experience in the area of website optimization for search engines.</p>
             </div>
         </div>
     </section>
@@ -85,7 +87,7 @@
             </div>
 
             <p class="skills__paragraph">I’ve been learning Front-End technologies for over a half of year now. I took part in many courses and bootcamps
-                related to Web Design, UX Design and JavaScript. You can <a class="skills__link" href="#">see my ceriticates here</a>                or visit my account on <a class="skills__link" href="https://github.com/ppalyga" target="_blank">GitGub</a>,
+                related to Web Design, UX Design and JavaScript. You can <a class="skills__link" href="#">see my certificates here</a> or visit my account on <a class="skills__link" href="https://www.linkedin.com/in/przemyslaw-palyga/" target="_blank">LinkedIn</a>, <a class="skills__link" href="https://github.com/ppalyga" target="_blank">GitGub</a>,
                 <a class="skills__link" href="https://codepen.io/ppalyga/" target="_blank">CodePen</a> or <a class="skills__link"
                     href="https://www.freecodecamp.com/ppalyga" target="_blank">FreeCodeCamp.</a></p>
 
@@ -115,7 +117,7 @@
                         <div class="skill-card__items">
                             <h3><span class="skill-card__main-skill">js</span><br/>jquery<br/>es6<br/>react</h3>
                         </div>
-                        <p class="skill-card__description">Learning this language was the first serious challenge I came across. At the same time, I know it
+                        <p class="skill-card__description">Learning JavaScript was the first serious challenge I came across. At the same time, I know it
                             is something I enjoy and I expand my knowledge in this field every day.
                         </p>
                     </div>
@@ -124,17 +126,16 @@
                         <div class="skill-card__items">
                             <h3><span class="skill-card__main-skill">nodeJS</span><br/>express<br/>mongodb</h3>
                         </div>
-                        <p class="skill-card__description">While my focus is on the Front-End, I also had a chance to build a few simple apps in NodeJS. I learnt
-                            a bit about RESTful routing, authentication and authorization.
+                        <p class="skill-card__description">While my focus is on the Front-End, I also had a chance to use NodeJS. I learnt
+                            a bit about routing, authentication and authorization.
                         </p>
                     </div>
 
                     <div class="skill-card swiper-slide">
                         <div class="skill-card__items">
-                            <h3><span class="skill-card__main-skill">git</span><br/>webpack<br/>gulp</h3>
+                            <h3><span class="skill-card__main-skill">git</span><br/>webpack<br/>gulp<br/>heroku</h3>
                         </div>
-                        <p class="skill-card__description">When I first learnt the basics of this version control system, I immediately thought it is extremely
-                            helpful. Now I use GIT for most of my projects.
+                        <p class="skill-card__description">Modern web development can be complicated and time-consuming. To make my work easier, I use version control and task automators.
                         </p>
                     </div>
                 </div>
@@ -148,7 +149,7 @@
                 <div class="section-header__line"></div>
             </div>
 
-            <p class="projects__paragraph">Practice makes perfect, they say. Apart from doing exercises focused on improving particular skills, I also try
+            <p class="projects__paragraph">Practice makes perfect, they say. Apart from exercises focused on improving my skills, I also try
                 to incorporate what I learned into some bigger projects.</p>
 
             <div class="projects__image"></div>
@@ -178,8 +179,8 @@
                     <button class="contact__button">send</button>
                 </div>
             </form>
-            <p class="contact__paragraph">If you want to hear more about me or if you are iterested in working with me, please use the form below and I
-                will respond as soons as possible.</p>
+            <p class="contact__paragraph">If you want to hear more about me or if you are interested in working with me, please use the form below and
+                I will respond as soon as possible.</p>
         </div>
     </section>
 
@@ -188,9 +189,54 @@
         <div class="to-top__line"></div>
     </div>
 
+    <!-- PhotoSwipe boilerplate -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+			</button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+			</button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js" integrity="sha256-ShAhm+50eq3u2njxZteHrfMlg/Nh+I1EtHL289p5gIM="
         crossorigin="anonymous"></script>
     <script src="assets/js/smoothscroll.min.js"></script>
+    <script src="assets/js/photoswipe.min.js"></script>
+    <script src="assets/js/photoswipe-ui-default.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
