@@ -146,9 +146,23 @@
     }
   }
 
+  function lazyLoader() {
+    var imgSkills = document.querySelector('.skills__image');
+    var imgProjects = document.querySelector('.projects__image');
+
+    var io = new IntersectionObserver(entries => {
+      if (entries[entries.length - 1].isIntersecting === true) {
+        imgSkills.classList.add('skills__image--lazy-loaded');
+        imgProjects.classList.add('projects__image--lazy-loaded');
+      }
+    });
+    io.observe(document.querySelector('.skills__image'));
+  }
+
   initializeMenu();
   toggleMenu();
   initializeSkillsSlider();
   changeActiveSection();
   initializePhotoSwipe();
+  lazyLoader();
 })();
