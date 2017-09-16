@@ -159,10 +159,54 @@
     io.observe(document.querySelector('.skills__image'));
   }
 
+  function sendMessage() {
+    var form = document.querySelector('.contact__form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var name = document.querySelector('.contact__input[name="name"]'),
+        email = document.querySelector('.contact__input[name="email"]'),
+        msg = document.querySelector('.contact__input[name="message"]'),
+        url = 'https://hommeexmachina.000webhostapp.com/contact-form.php',
+        err = 'Something went wrong. Your message have not been sent.';
+
+      fetch(url, {
+        method: 'post',
+        headers: {
+          'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        body:
+          'name=' +
+          name.value +
+          '&email=' +
+          email.value +
+          '&message=' +
+          msg.value
+      })
+        .then(function(response) {
+          name.value = '';
+          email.value = '';
+          if (response.status !== 200) {
+            msg.value = err;
+            return;
+          }
+          response.json().then(function(data) {
+            msg.value = data.response;
+          });
+        })
+        .catch(function() {
+          name.value = '';
+          email.value = '';
+          msg.value = err;
+        });
+    });
+  }
+
   initializeMenu();
   toggleMenu();
   initializeSkillsSlider();
   changeActiveSection();
   initializePhotoSwipe();
   lazyLoader();
+  sendMessage();
 })();

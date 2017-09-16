@@ -367,6 +367,7 @@ a {
       height: 16.8rem;
       border: 2px solid $blue;
       box-shadow: $shadow;
+      z-index: 10;
     }
   }
 
@@ -456,7 +457,7 @@ a {
 
   &__button {
     position: relative;
-    top: -0.2rem;
+    top: -0.3rem;
     width: $width--mobile;
     min-height: 15.1rem;
     box-sizing: border-box;
