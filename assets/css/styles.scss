@@ -363,11 +363,10 @@ a {
       position: relative;
       left: -3.9rem;
       top: 13.8rem;
-      width: $width--mobile;
-      height: 16.8rem;
+      width: 26.7rem;
+      height: 16.9rem;
       border: 2px solid $blue;
       box-shadow: $shadow;
-      z-index: 10;
     }
   }
 
@@ -386,7 +385,6 @@ a {
   height: 16.8rem;
   background: $white;
   border-top: 2px solid $blue;
-  border-bottom: 2px solid $blue;
   text-align: center;
 
   &__items {
@@ -647,7 +645,7 @@ a {
 
     &__image {
       &::after {
-        width: $width--tablet;
+        width: 50.1rem;
         left: -15.6rem;
       }
     }
@@ -861,7 +859,6 @@ a {
 
   .skill-card {
     border-top: 2px solid $beige;
-    border-bottom: 2px solid $beige;
 
     &__items {
       background: $beige--light;
